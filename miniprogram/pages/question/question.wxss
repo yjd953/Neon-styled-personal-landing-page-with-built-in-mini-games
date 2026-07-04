@@ -1,0 +1,116 @@
+/* question.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 26rpx;
+}
+
+.question-number {
+  font-size: 24rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.question-container {
+  padding: 40rpx 30rpx;
+  text-align: center;
+}
+
+.question {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 0 20rpx;
+}
+
+.operator {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 0 20rpx;
+}
+
+.equals {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin: 0 20rpx;
+}
+
+.answer {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4CAF50;
+  margin: 0 20rpx;
+  min-width: 100rpx;
+  display: inline-block;
+}
+
+.handwriting-canvas {
+  width: 100%;
+  height: 300rpx;
+  background-color: transparent;
+  border-radius: 10rpx;
+}
+
+.handwriting-container {
+  padding: 20rpx;
+}
+
+.canvas-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  gap: 14rpx;
+}
+
+.clear-btn {
+  flex: 1;
+  height: 88rpx;
+}
+
+.submit-btn {
+  flex: 2;
+  height: 88rpx;
+}
+
+.feedback {
+  padding: 20rpx;
+  text-align: center;
+}
+
+.feedback-text {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.input-hint {
+  position: fixed;
+  bottom: 30rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+}
+
+.input-hint-text {
+  font-size: 24rpx;
+  color: rgba(15, 23, 42, 0.72);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 14rpx 22rpx;
+  border-radius: 999rpx;
+  display: inline-block;
+}

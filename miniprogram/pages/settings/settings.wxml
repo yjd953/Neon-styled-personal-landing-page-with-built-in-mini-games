@@ -1,0 +1,16 @@
+<view class="page-wrap">
+  <view class="max-w">
+  <view class="card settings-card">
+    <view class="row">
+      <text class="label">提示音</text>
+      <switch checked="{{enableSound}}" bindchange="onToggleSound" />
+    </view>
+    <view class="row">
+      <text class="label">震动反馈</text>
+      <switch checked="{{enableHaptics}}" bindchange="onToggleHaptics" />
+    </view>
+  </view>
+
+  <button class="btn btn-primary save-btn" bindtap="saveSettings" loading="{{saving}}">保存设置</button>
+</view>
+  </view>

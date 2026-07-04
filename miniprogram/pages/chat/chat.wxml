@@ -1,0 +1,26 @@
+<view class="page-wrap">
+  <view class="max-w container">
+    <scroll-view class="messages card" scroll-y enhanced="true" scroll-with-animation="true" scroll-into-view="{{bottomId}}">
+      <view class="messages-inner">
+        <view wx:for="{{messages}}" wx:key="id" id="m-{{item.id}}" class="msg msg-{{item.role}}">
+          <view class="bubble">
+            <text class="bubble-text">{{item.content}}</text>
+          </view>
+        </view>
+
+        <view wx:if="{{sending}}" class="msg msg-assistant">
+          <view class="bubble">
+            <text class="bubble-text muted">正在思考…</text>
+          </view>
+        </view>
+
+        <view id="{{bottomId}}" class="bottom-anchor"></view>
+      </view>
+    </scroll-view>
+
+    <view class="composer card">
+      <input class="input" value="{{input}}" placeholder="输入问题或拍错题问我…" confirm-type="send" bindinput="onInput" bindconfirm="send" />
+      <button class="btn btn-primary send-btn" bindtap="send" loading="{{sending}}" disabled="{{sending}}">发 送</button>
+    </view>
+  </view>
+</view>

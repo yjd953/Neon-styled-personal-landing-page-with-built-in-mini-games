@@ -1,0 +1,47 @@
+<!--summary.wxml-->
+<view class="page-wrap">
+  <view class="max-w">
+<view class="container">
+  <view class="header">
+    <text class="title title-lg">答题总结</text>
+  </view>
+  
+  <view class="summary-card card">
+    <view class="summary-item">
+      <text class="summary-label">总题数</text>
+      <text class="summary-value">{{questionCount}}</text>
+    </view>
+    <view class="summary-item">
+      <text class="summary-label">正确题数</text>
+      <text class="summary-value correct">{{correctCount}}</text>
+    </view>
+    <view class="summary-item">
+      <text class="summary-label">错误题数</text>
+      <text class="summary-value incorrect">{{incorrectCount}}</text>
+    </view>
+    <view class="summary-item">
+      <text class="summary-label">用时</text>
+      <text class="summary-value">{{formattedTime}}</text>
+    </view>
+  </view>
+  
+  <view class="wrong-questions card" wx:if="{{wrongQuestions.length > 0}}">
+    <text class="wrong-title title-md">错题记录</text>
+    <view wx:for="{{wrongQuestions}}" wx:key="index" class="wrong-item">
+      <text class="wrong-question">{{item.question}} {{item.operator}} {{item.number2}} = {{item.correctAnswer}}</text>
+      <text class="wrong-answer">你的答案: {{item.userAnswer}}</text>
+    </view>
+  </view>
+  
+  <view class="ai-summary card">
+    <text class="ai-title title-md">AI总结报告</text>
+    <text class="ai-description">提交给AI生成个性化学习报告</text>
+    <button class="btn btn-secondary ai-btn" bindtap="submitToAI">提交给AI</button>
+  </view>
+  
+  <view class="footer-buttons">
+    <button class="btn btn-ghost home-btn" bindtap="goHome">返回首页</button>
+  </view>
+</view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+.settings-card {
+  padding: 20rpx;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 10rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: rgba(15, 23, 42, 0.85);
+}
+
+.save-btn {
+  margin-top: 30rpx;
+  width: 100%;
+}

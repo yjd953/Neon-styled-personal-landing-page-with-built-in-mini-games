@@ -1,0 +1,32 @@
+<!--purchases.wxml-->
+<view class="page-wrap">
+  <view class="max-w">
+<view class="container">
+  <view class="header">
+    <text class="title title-lg">购买记录</text>
+  </view>
+  
+  <view wx:if="{{loading}}" class="empty">
+    <text class="empty-text">加载中...</text>
+  </view>
+
+  <view class="purchase-list">
+    <view wx:for="{{purchaseList}}" wx:key="id" class="purchase-item card">
+      <view class="purchase-header">
+        <text class="product">{{item.product}}</text>
+        <text class="status">{{item.status}}</text>
+      </view>
+      <view class="purchase-details">
+        <text class="detail">金额: ¥{{item.amount}}</text>
+        <text class="detail">时间: {{item.date}}</text>
+        <text class="detail">订单号: {{item.orderId}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view wx:if="{{!loading && purchaseList.length === 0}}" class="empty">
+    <text class="empty-text">暂无购买记录</text>
+  </view>
+</view>
+  </view>
+</view>

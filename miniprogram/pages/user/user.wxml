@@ -1,0 +1,57 @@
+<!--user.wxml-->
+<view class="page-wrap">
+  <view class="max-w">
+<view class="container">
+  <view class="user-header card">
+    <image src="{{userInfo.avatarUrl || '/images/avatar.png'}}" class="avatar"></image>
+    <view class="user-info">
+      <text class="nickname">{{userInfo.nickName || '未登录'}}</text>
+      <text class="user-id">ID: {{userInfo.userId || '----'}}</text>
+    </view>
+    <button 
+      wx:if="{{!userInfo.userId}}" 
+      class="btn btn-primary login-btn" 
+      bindtap="handleLogin"
+      loading="{{isLogging}}"
+      disabled="{{isLogging}}"
+    >
+      {{isLogging ? '登录中...' : '微信登录'}}
+    </button>
+  </view>
+  
+  <view class="member-card card">
+    <view class="member-header">
+      <text class="member-title title-md">会员中心</text>
+      <text class="member-level">{{memberInfo.level || '普通会员'}}</text>
+    </view>
+    <view class="member-benefits">
+      <text class="benefit">• {{memberInfo.benefit1 || '基础练习'}}</text>
+      <text class="benefit">• {{memberInfo.benefit2 || '错题记录'}}</text>
+      <text class="benefit">• {{memberInfo.benefit3 || '学习报告'}}</text>
+    </view>
+  </view>
+  
+  <view class="menu-list card">
+    <view class="menu-item" bindtap="goToHistory">
+      <text class="menu-icon">📊</text>
+      <text class="menu-text">历史记录</text>
+      <image src="/images/arrow.svg" class="menu-arrow"></image>
+    </view>
+    <view class="menu-item" bindtap="goToPurchases">
+      <text class="menu-icon">💳</text>
+      <text class="menu-text">购买记录</text>
+      <image src="/images/arrow.svg" class="menu-arrow"></image>
+    </view>
+    <view class="menu-item" bindtap="goToSettings">
+      <text class="menu-icon">⚙️</text>
+      <text class="menu-text">设置</text>
+      <image src="/images/arrow.svg" class="menu-arrow"></image>
+    </view>
+  </view>
+  
+  <view class="footer">
+    <text class="footer-text">基础数学思维练习 v2.3</text>
+  </view>
+</view>
+  </view>
+</view>

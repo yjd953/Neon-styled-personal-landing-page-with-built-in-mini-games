@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="page-wrap">
+  <view class="max-w">
+  <view class="header">
+    <image src="/images/avatar.png" class="logo"></image>
+    <text class="title title-lg">基础数学思维练习</text>
+  </view>
+  
+  <view class="content">
+    <view class="intro card">
+      <text class="intro-title title-md">游戏说明</text>
+      <text class="intro-text">1. 选择题数开始练习</text>
+      <text class="intro-text">2. 包含加减乘除四种运算</text>
+      <text class="intro-text">3. 手写答案，系统自动识别</text>
+      <text class="intro-text">4. 完成后查看答题结果</text>
+    </view>
+    
+    <view class="question-count">
+      <text class="count-title">选择题数</text>
+      <view class="count-options">
+        <button 
+          wx:for="{{questionCounts}}" 
+          wx:key="value"
+          class="count-option {{selectedCount === item.value ? 'selected' : ''}}"
+          bindtap="selectCount" 
+          data-value="{{item.value}}"
+        >
+          {{item.label}}
+        </button>
+      </view>
+    </view>
+    
+    <button class="btn btn-primary start-btn" bindtap="startQuiz">开始刷题</button>
+  </view>
+  </view>
+</view>

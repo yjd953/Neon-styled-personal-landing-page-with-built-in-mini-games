@@ -1,0 +1,92 @@
+/* result.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.result-header {
+  margin-top: 6rpx;
+  text-align: center;
+}
+
+.result-title {
+}
+
+.result-card {
+  padding: 40rpx;
+  width: 100%;
+  max-width: 600rpx;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.result-label {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.result-value {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.result-value.correct {
+  color: #4CAF50;
+}
+
+.result-value.incorrect {
+  color: #F44336;
+}
+
+.recommendations {
+  padding: 30rpx;
+  width: 100%;
+  max-width: 600rpx;
+}
+
+.recommendations-title {
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.recommendations-text {
+  font-size: 24rpx;
+  color: rgba(15, 23, 42, 0.65);
+  margin-bottom: 15rpx;
+  display: block;
+}
+
+.buttons {
+  width: 100%;
+  max-width: 600rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.summary-btn {
+  width: 100%;
+}
+
+.restart-btn {
+  width: 100%;
+}
+
+.home-btn {
+  width: 100%;
+}

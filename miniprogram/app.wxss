@@ -1,0 +1,127 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+view, text, image, button, canvas {
+  box-sizing: border-box;
+}
+
+button {
+  background: initial;
+  font-family: PingFang SC;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}
+
+page {
+  background: linear-gradient(180deg, #eaf6ff 0%, #f6fbff 45%, #f0f8ff 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: PingFang SC;
+}
+
+/* 动画效果 */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10rpx);
+  }
+  60% {
+    transform: translateY(-5rpx);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* 渐变背景 */
+.gradient-bg {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+/* 标题样式 */
+title {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 文本样式 */
+text {
+  font-family: PingFang SC;
+}
+
+.page-wrap {
+  width: 100%;
+  padding: 24rpx;
+  padding-bottom: calc(24rpx + env(safe-area-inset-bottom));
+}
+
+.max-w {
+  width: 100%;
+  max-width: 650rpx;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 24rpx;
+  border: 1rpx solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 16rpx 48rpx rgba(15, 23, 42, 0.08);
+}
+
+.btn {
+  height: 88rpx;
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4CAF50, #2fb36b);
+  color: #fff;
+  box-shadow: 0 10rpx 24rpx rgba(76, 175, 80, 0.28);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #2196F3, #3b82f6);
+  color: #fff;
+  box-shadow: 0 10rpx 24rpx rgba(33, 150, 243, 0.25);
+}
+
+.btn-ghost {
+  background-color: rgba(15, 23, 42, 0.06);
+  color: #0f172a;
+}
+
+.muted {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.title-lg {
+  font-size: 38rpx;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.title-md {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #0f172a;
+}

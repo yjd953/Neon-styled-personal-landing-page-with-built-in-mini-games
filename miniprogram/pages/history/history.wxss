@@ -1,0 +1,64 @@
+/* history.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18rpx;
+}
+
+.header {
+  margin-top: 6rpx;
+}
+
+.title {
+}
+
+.history-list {
+  width: 100%;
+}
+
+.history-item {
+  padding: 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.date {
+  font-size: 24rpx;
+  color: rgba(15, 23, 42, 0.6);
+}
+
+.score {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.history-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.detail {
+  font-size: 20rpx;
+  color: rgba(15, 23, 42, 0.55);
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.empty {
+  margin-top: 60rpx;
+  text-align: center;
+}
+
+.empty-text {
+  font-size: 24rpx;
+  color: rgba(15, 23, 42, 0.55);
+}

@@ -1,0 +1,46 @@
+<!--result.wxml-->
+<view class="page-wrap">
+  <view class="max-w">
+<view class="container">
+  <view class="result-header">
+    <text class="result-title title-lg">答题完成！</text>
+  </view>
+  
+  <view class="result-card card">
+    <view class="result-item">
+      <text class="result-label">总题数</text>
+      <text class="result-value">{{questionCount}}</text>
+    </view>
+    <view class="result-item">
+      <text class="result-label">正确题数</text>
+      <text class="result-value correct">{{correctCount}}</text>
+    </view>
+    <view class="result-item">
+      <text class="result-label">错误题数</text>
+      <text class="result-value incorrect">{{incorrectCount}}</text>
+    </view>
+    <view class="result-item">
+      <text class="result-label">用时</text>
+      <text class="result-value">{{formatTime(elapsedTime)}}</text>
+    </view>
+    <view class="result-item">
+      <text class="result-label">正确率</text>
+      <text class="result-value">{{accuracy}}%</text>
+    </view>
+  </view>
+  
+  <view class="recommendations card">
+    <text class="recommendations-title title-md">推荐练习</text>
+    <text class="recommendations-text">1. 加强 {{weakArea}} 练习</text>
+    <text class="recommendations-text">2. 每天坚持练习10分钟</text>
+    <text class="recommendations-text">3. 错题多练习，巩固知识点</text>
+  </view>
+  
+  <view class="buttons">
+    <button class="btn btn-secondary summary-btn" bindtap="goToSummary">查看总结</button>
+    <button class="btn btn-primary restart-btn" bindtap="restartQuiz">重新开始</button>
+    <button class="btn btn-ghost home-btn" bindtap="goHome">返回首页</button>
+  </view>
+</view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<!--history.wxml-->
+<view class="page-wrap">
+  <view class="max-w">
+<view class="container">
+  <view class="header">
+    <text class="title title-lg">历史记录</text>
+  </view>
+  
+  <view wx:if="{{loading}}" class="empty">
+    <text class="empty-text">加载中...</text>
+  </view>
+
+  <view class="history-list">
+    <view wx:for="{{historyList}}" wx:key="id" class="history-item card">
+      <view class="history-header">
+        <text class="date">{{item.date}}</text>
+        <text class="score">{{item.score}}分</text>
+      </view>
+      <view class="history-details">
+        <text class="detail">正确: {{item.correct}}题</text>
+        <text class="detail">错误: {{item.incorrect}}题</text>
+        <text class="detail">用时: {{item.time}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <view wx:if="{{!loading && historyList.length === 0}}" class="empty">
+    <text class="empty-text">暂无历史记录</text>
+  </view>
+</view>
+  </view>
+</view>
